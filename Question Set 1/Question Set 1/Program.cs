@@ -226,20 +226,20 @@ namespace Question_Set_1
             //Console.WriteLine(" The BMI is: " + BMI);
 
             // NO 25
-            Console.WriteLine("Enter the ROLLNO:");
-            int RollNo = int.Parse(Console.ReadLine());
-            Console.WriteLine("Enter the Name:");
-            string name = Console.ReadLine();
-            Console.WriteLine("Enter the Mark 1:");
-            double Mark1 = double.Parse(Console.ReadLine());
-            Console.WriteLine("Enter the Mark 2:");
-            double mark2 = double.Parse(Console.ReadLine());
-            Console.WriteLine("Enter the Mark 3:");
-            double mark3 = double.Parse(Console.ReadLine());
-            double TotalMarks = Mark1 + mark2 + mark3;
-            double AverageMark = TotalMarks / 3;
-            Console.WriteLine("Total Marks is:" + TotalMarks);
-            Console.WriteLine("Average Marks is:" + AverageMark);
+            //Console.WriteLine("Enter the ROLLNO:");
+            //int RollNo = int.Parse(Console.ReadLine());
+            //Console.WriteLine("Enter the Name:");
+            //string name = Console.ReadLine();
+            //Console.WriteLine("Enter the Mark 1:");
+            //double Mark1 = double.Parse(Console.ReadLine());
+            //Console.WriteLine("Enter the Mark 2:");
+            //double mark2 = double.Parse(Console.ReadLine());
+            //Console.WriteLine("Enter the Mark 3:");
+            //double mark3 = double.Parse(Console.ReadLine());
+            //double TotalMarks = Mark1 + mark2 + mark3;
+            //double AverageMark = TotalMarks / 3;
+            //Console.WriteLine("Total Marks is:" + TotalMarks);
+            //Console.WriteLine("Average Marks is:" + AverageMark);
           
 
         }
