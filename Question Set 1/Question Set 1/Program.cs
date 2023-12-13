@@ -44,14 +44,46 @@ namespace Question_Set_1
             //Console.WriteLine("THe Perimeter of the given circle is" + Perimeter);
 
             // NO 5
-            Console.WriteLine("Enter the Numberator");
-            int Numerator = int.Parse(Console.ReadLine());
-            Console.WriteLine("Enter the Denominator");
-            int Denominator = int.Parse(Console.ReadLine());
-            int Quotient = Numerator / Denominator;
-            int Remainder = Numerator % Denominator;
-            Console.WriteLine("The Quotient is" + Quotient);
-            Console.WriteLine("The Remainder is" + Remainder);
+            //Console.WriteLine("Enter the Numberator");
+            //int Numerator = int.Parse(Console.ReadLine());
+            //Console.WriteLine("Enter the Denominator");
+            //int Denominator = int.Parse(Console.ReadLine());
+            //int Quotient = Numerator / Denominator;
+            //int Remainder = Numerator % Denominator;
+            //Console.WriteLine("The Quotient is" + Quotient);
+            //Console.WriteLine("The Remainder is" + Remainder);
+
+            // NO 6
+            //Console.WriteLine("Enter the Number");
+            //int number = int.Parse(Console.ReadLine());
+            //double Square = Math.Pow(number, 2);
+            //Console.WriteLine("The Square of a given number is " + Square);
+
+            // N0 7
+            //Console.WriteLine("Enter the Number");
+            //int number = int.Parse(Console.ReadLine());
+            //double SquareRoot = Math.Sqrt(number);
+            //Console.WriteLine("The Square Root of a given number " + SquareRoot);
+
+            // NO 8
+            //Console.WriteLine("Enter the Base of Traingle");
+            //double Base = double.Parse(Console.ReadLine());
+            //Console.WriteLine("Enter the Height of the Triangle");
+            //double height = double.Parse(Console.ReadLine());
+            //double Area = 0.5 * Base * height;
+            //Console.WriteLine("The Area of the Triangle is" + Area);
+
+            // No 9
+            //Console.WriteLine("Enter the Distance in Kilometer");
+            //double KM = double.Parse(Console.ReadLine());
+            //double Miles = KM * 0.621371;
+            //Console.WriteLine("The Distance in Miles is" + Miles);
+
+            // NO 10
+            Console.WriteLine("Enter the Temperature in Celsius");
+            double Celsius = double.Parse(Console.ReadLine());
+            double Fareheit = (Celsius * 9) / 5 + 32;
+            Console.WriteLine("The Tenoerature in Fareheit is" + Fareheit);
 
         }
     }
