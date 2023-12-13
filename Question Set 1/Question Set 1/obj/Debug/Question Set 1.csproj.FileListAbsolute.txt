@@ -1,0 +1,6 @@
+C:\Users\admin\Documents\Visual Studio 2012\Projects\C Sharop Basics\Question Set 1\Question Set 1\bin\Debug\Question Set 1.exe.config
+C:\Users\admin\Documents\Visual Studio 2012\Projects\C Sharop Basics\Question Set 1\Question Set 1\bin\Debug\Question Set 1.exe
+C:\Users\admin\Documents\Visual Studio 2012\Projects\C Sharop Basics\Question Set 1\Question Set 1\bin\Debug\Question Set 1.pdb
+C:\Users\admin\Documents\Visual Studio 2012\Projects\C Sharop Basics\Question Set 1\Question Set 1\obj\Debug\Question Set 1.csprojResolveAssemblyReference.cache
+C:\Users\admin\Documents\Visual Studio 2012\Projects\C Sharop Basics\Question Set 1\Question Set 1\obj\Debug\Question Set 1.exe
+C:\Users\admin\Documents\Visual Studio 2012\Projects\C Sharop Basics\Question Set 1\Question Set 1\obj\Debug\Question Set 1.pdb
