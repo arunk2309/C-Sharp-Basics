@@ -118,16 +118,92 @@ namespace Question_Set_2
             //Console.WriteLine("The Smallest amount Three Number is: " + result);
 
             // NO 10
-            Console.WriteLine("Enter the Value of A");
-            int a = int.Parse(Console.ReadLine());
-            Console.WriteLine("Enter the Value of B");
-            int b = int.Parse(Console.ReadLine());
-            Console.WriteLine("Enter the Value of C");
-            int c = int.Parse(Console.ReadLine());
-            Console.WriteLine("Enter the Value of D");
-            int d = int.Parse(Console.ReadLine());
-            int result = LargestFourNumber(a, b, c, d);
-            Console.WriteLine("The Largest Among Four Number is: " + result);
+            //Console.WriteLine("Enter the Value of A");
+            //int a = int.Parse(Console.ReadLine());
+            //Console.WriteLine("Enter the Value of B");
+            //int b = int.Parse(Console.ReadLine());
+            //Console.WriteLine("Enter the Value of C");
+            //int c = int.Parse(Console.ReadLine());
+            //Console.WriteLine("Enter the Value of D");
+            //int d = int.Parse(Console.ReadLine());
+            //int result = LargestFourNumber(a, b, c, d);
+            //Console.WriteLine("The Largest Among Four Number is: " + result);
+
+            // NO 11
+            //Console.WriteLine("Enter the Value of A");
+            //int a = int.Parse(Console.ReadLine());
+            //Console.WriteLine("Enter the Value of B");
+            //int b = int.Parse(Console.ReadLine());
+            //Console.WriteLine("Enter the Value of C");
+            //int c = int.Parse(Console.ReadLine());
+            //int result1, result2;
+            //ClosestNumber(a, b, c, out result1, out result2);
+            //Console.WriteLine("THe Two number that are closer to each other are: " + result1 + " and " + result2);
+
+            // No 12
+            //Console.WriteLine("Enter the Value of A");
+            //int a = int.Parse(Console.ReadLine());
+            //Console.WriteLine("Enter the Value of B");
+            //int b = int.Parse(Console.ReadLine());
+            //Console.WriteLine("Enter the Value of C");
+            //int c = int.Parse(Console.ReadLine());
+            //int result1, result2;
+            //FartherNumber(a, b, c, out result1, out result2);
+            //Console.WriteLine("THe Two Number that are Farther from each other: " + result1 + " and " + result2);
+            
+            // NO 13
+            //Console.WriteLine("Enter the number 1");
+            //int num1 = int.Parse(Console.ReadLine());
+            //Console.WriteLine("Enter the number 2");
+            //int num2 = int.Parse(Console.ReadLine());
+            //Console.WriteLine("Enter the number 3");
+            //int num3 = int.Parse(Console.ReadLine());
+            //int[] number = { num1, num2, num3 };
+            //Array.Sort(number);
+            //Console.WriteLine("The Sorted Three Number is: " + number[0] + " , " + number[1] + " and " + number[2]);
+
+            // NO 14
+            //Console.WriteLine("Enter First Number");
+            //int num1 = int.Parse(Console.ReadLine());
+            //Console.WriteLine("Enter the Second Number");
+            //int num2 = int.Parse(Console.ReadLine());
+            //Console.WriteLine("Enter the Third Number");
+            //int num3 = int.Parse(Console.ReadLine());
+            //if (num1 + num2 + num3 == 100)
+            //{
+            //    Console.WriteLine("The given values can form a triangle");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("The given values cannot form a triangle");
+            //}
+
+            // NO 15
+            Console.WriteLine("Enter X-Coordinate:");
+            double x = double.Parse(Console.ReadLine());
+            Console.WriteLine("Enter a Y-Coordinate:");
+            double y = double.Parse(Console.ReadLine());
+            if (x > 0 && y > 0)
+            {
+                Console.WriteLine("The Point Lies on FIrst Quadrant");
+            }
+            else if (x < 0 && y < 0)
+            {
+                Console.WriteLine("The Point Lies on Second Quadrant");
+            }
+            else if (x > 0 && y < 0)
+            {
+                Console.WriteLine("The Point Lies on the Third Quadrant");
+            }
+            else if (x < 0 && y > 0)
+            {
+                Console.WriteLine("The Point Lies on the Fourth Quadrant");
+            }
+            else
+            {
+                Console.WriteLine("The Point Lies on one of the Axes");
+            }
+
         }
 
         // No 8
@@ -162,6 +238,52 @@ namespace Question_Set_2
                 return c;
             else
                 return d;
+        }
+
+        // NO 11 
+        public static void ClosestNumber(int a, int b, int c, out int result1, out int result2)
+        {
+            int diff1 = Math.Abs(a - b);
+            int diff2 = Math.Abs(a - c);
+            int diff3 = Math.Abs(b - c);
+            if (diff1 <= diff2 && diff1 <= diff3)
+            {
+                result1 = a;
+                result2 = b;
+            }
+            else if (diff2 <= diff1 && diff2 <= diff3)
+            {
+                result1 = a;
+                result2 = c;
+            }
+            else
+            {
+                result1 = b;
+                result2 = c;
+            }
+        }
+
+        // NO 12
+        public static void FartherNumber(int a, int b, int c, out int result1, out int result2)
+        {
+            int diff1 = Math.Abs(a - b);
+            int diff2 = Math.Abs(a - c);
+            int diff3 = Math.Abs(b - c);
+            if (diff1 >= diff2 && diff1 >= diff3)
+            {
+                result1 = a;
+                result2 = b;
+            }
+            else if (diff2 >= diff1 && diff2 >= diff3)
+            {
+                result1 = a;
+                result2 = c;
+            }
+            else
+            {
+                result1 = b;
+                result2 = c;
+            }
         }
     }
 }
