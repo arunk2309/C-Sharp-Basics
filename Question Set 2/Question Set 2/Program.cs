@@ -179,30 +179,88 @@ namespace Question_Set_2
             //}
 
             // NO 15
-            Console.WriteLine("Enter X-Coordinate:");
-            double x = double.Parse(Console.ReadLine());
-            Console.WriteLine("Enter a Y-Coordinate:");
-            double y = double.Parse(Console.ReadLine());
-            if (x > 0 && y > 0)
-            {
-                Console.WriteLine("The Point Lies on FIrst Quadrant");
-            }
-            else if (x < 0 && y < 0)
-            {
-                Console.WriteLine("The Point Lies on Second Quadrant");
-            }
-            else if (x > 0 && y < 0)
-            {
-                Console.WriteLine("The Point Lies on the Third Quadrant");
-            }
-            else if (x < 0 && y > 0)
-            {
-                Console.WriteLine("The Point Lies on the Fourth Quadrant");
-            }
-            else
-            {
-                Console.WriteLine("The Point Lies on one of the Axes");
-            }
+            //Console.WriteLine("Enter X-Coordinate:");
+            //double x = double.Parse(Console.ReadLine());
+            //Console.WriteLine("Enter a Y-Coordinate:");
+            //double y = double.Parse(Console.ReadLine());
+            //if (x > 0 && y > 0)
+            //{
+            //    Console.WriteLine("The Point Lies on FIrst Quadrant");
+            //}
+            //else if (x < 0 && y < 0)
+            //{
+            //    Console.WriteLine("The Point Lies on Second Quadrant");
+            //}
+            //else if (x > 0 && y < 0)
+            //{
+            //    Console.WriteLine("The Point Lies on the Third Quadrant");
+            //}
+            //else if (x < 0 && y > 0)
+            //{
+            //    Console.WriteLine("The Point Lies on the Fourth Quadrant");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("The Point Lies on one of the Axes");
+            //}
+
+            // NO 16
+            //Console.WriteLine("Enter a Character");
+            //char character = Convert.ToChar(Console.ReadLine());
+            //if (char.IsLetter(character))
+            //{
+            //    if (character == 'a' || character == 'e' || character == 'i' || character == 'o' || character == 'u' || character == 'A' || character == 'E' || character == 'I' || character == 'O' || character == 'U')
+            //    {
+            //        Console.WriteLine("The Given Character is a Vowel");
+            //    }
+            //    else
+            //    {
+            //        Console.WriteLine("THe GIven character is a Consonant");
+            //    }
+            //}
+
+            // NO 17
+            //Console.WriteLine("Enter the number of sides of the shape (3 to 10):");
+            //int sides = int.Parse(Console.ReadLine());
+            //if (sides < 3 || sides > 10)
+            //{
+            //    Console.WriteLine("Error: The sides should be between 3 to 10");
+            //}
+            //else
+            //{
+            //    string ShapeName = GetShapeName(sides);
+            //    Console.WriteLine("The Number of " + sides + " is called a " + ShapeName);
+            //}
+
+            // NO 18
+            //Console.WriteLine("Enter a Month Name (ex: Jamuary,Febraury,...)");
+            //string monthname = Console.ReadLine();
+            //int daysinMonth = GetDaysinMonth(monthname);
+            //Console.WriteLine("The number of days in " + monthname + " is " + daysinMonth);
+
+            // NO 19
+            //Console.WriteLine("Enter the day of the Month (1 - 31):");
+            //int daysofMonth = int.Parse(Console.ReadLine());
+            //if (daysofMonth < 1 || daysofMonth > 31)
+            //{
+            //    Console.WriteLine("Error: Please Enter the days between 1 to 31");
+            //    return;
+            //}
+            //Console.WriteLine("Enter the month name");
+            //string monthName = Console.ReadLine();
+
+            //string daysofWeek = GetDaysofWeek(daysofMonth, monthName);
+            //Console.WriteLine("The days of the Week is " + daysofWeek); 
+
+            // NO 20
+            Console.WriteLine("Enter the Length of Side A");
+            int sideA = int.Parse(Console.ReadLine());
+            Console.WriteLine("Enter the Length of Side B");
+            int sideB = int.Parse(Console.ReadLine());
+            Console.WriteLine("Enter the Length of Side c");
+            int sideC = int.Parse(Console.ReadLine());
+            string TriangleType = GetTriangleType(sideA, sideB, sideC);
+            Console.WriteLine("The Triangle is " + TriangleType);
 
         }
 
@@ -283,6 +341,144 @@ namespace Question_Set_2
             {
                 result1 = b;
                 result2 = c;
+            }
+        }
+
+        // NO 17
+        public static string GetShapeName(int sides)
+        {
+            switch (sides)
+            {
+                case 3:
+                    return "Triangle";
+                case 4:
+                    return "Quadrilateral";
+                case 5:
+                    return "Pentagon";
+                case 6:
+                    return "Hexagon";
+                case 7:
+                    return "Heptagon";
+                case 8:
+                    return "Octagon";
+                case 9:
+                    return "Nonnagon";
+                case 10:
+                    return "Decagon";
+                default:
+                    return "Invalid Number of Sides";
+            }
+        }
+
+        // NO 18
+        public static int GetDaysinMonth(string monthname)
+        {
+            switch (monthname.ToLower())
+            {
+                case "jan":
+                case "mar":
+                case "May":
+                case "july":
+                case "august":
+                case "october":
+                case "december":
+                    return 31;
+                case "april":
+                case "june":
+                case "september":
+                case "november":
+                    return 30;
+                case "feb":
+                    return 28;
+                default:
+                    return -1;
+            }
+        }
+
+        // NO 19
+        public static string GetDaysofWeek(int daysofMonth, string monthName)
+        {
+            int daysinpreviousmonth = 0;
+            switch (monthName.ToLower())
+            {
+                case "jan":
+                    daysinpreviousmonth = 0;
+                    break;
+                case "feb":
+                    daysinpreviousmonth = 31;
+                    break;
+                case "mar":
+                    daysinpreviousmonth = 28;
+                    break;
+                case "apr":
+                    daysinpreviousmonth = 31;
+                    break;
+                case "May":
+                    daysinpreviousmonth = 30;
+                    break;
+                case "jun":
+                    daysinpreviousmonth = 31;
+                    break;
+                case "jul":
+                    daysinpreviousmonth = 30;
+                    break;
+                case "aug":
+                    daysinpreviousmonth = 31;
+                    break;
+                case "sep":
+                    daysinpreviousmonth = 31;
+                    break;
+                case "oct":
+                    daysinpreviousmonth = 30;
+                    break;
+                case "nov":
+                    daysinpreviousmonth = 31;
+                    break;
+                case "dec":
+                    daysinpreviousmonth = 30;
+                    break;
+                default:
+                    Console.WriteLine("Invalid Month Name");
+                    return null;
+
+            }
+            int totalDays = daysinpreviousmonth + daysofMonth;
+            int dayNumber = (totalDays- 1) % 7;
+            switch (dayNumber)
+            {
+                case 0:
+                    return "Monday";
+                case 1:
+                    return "Tuesday";
+                case 2:
+                    return "Wednesday";
+                case 3:
+                    return "Thursday";
+                case 4:
+                    return "Friday";
+                case 5:
+                    return "Saturday";
+                case 6:
+                    return "Sunday";
+                default:
+                    return null;
+            }
+        }
+
+        // NO 20
+        public static string GetTriangleType(int sideA, int sideB, int sideC)
+        {
+            if (sideA == sideB && sideB == sideC)
+            {
+                return "Equilateral";
+            }
+            else if (sideA == sideB || sideB == sideC || sideA == sideC)
+            {
+                return "Isoscales";
+            }
+            else
+            {
+                return "Scalene";
             }
         }
     }
