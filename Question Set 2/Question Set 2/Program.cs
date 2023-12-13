@@ -253,15 +253,171 @@ namespace Question_Set_2
             //Console.WriteLine("The days of the Week is " + daysofWeek); 
 
             // NO 20
-            Console.WriteLine("Enter the Length of Side A");
-            int sideA = int.Parse(Console.ReadLine());
-            Console.WriteLine("Enter the Length of Side B");
-            int sideB = int.Parse(Console.ReadLine());
-            Console.WriteLine("Enter the Length of Side c");
-            int sideC = int.Parse(Console.ReadLine());
-            string TriangleType = GetTriangleType(sideA, sideB, sideC);
-            Console.WriteLine("The Triangle is " + TriangleType);
+            //Console.WriteLine("Enter the Length of Side A");
+            //int sideA = int.Parse(Console.ReadLine());
+            //Console.WriteLine("Enter the Length of Side B");
+            //int sideB = int.Parse(Console.ReadLine());
+            //Console.WriteLine("Enter the Length of Side c");
+            //int sideC = int.Parse(Console.ReadLine());
+            //string TriangleType = GetTriangleType(sideA, sideB, sideC);
+            //Console.WriteLine("The Triangle is " + TriangleType);
 
+            // NO 21
+            //Console.WriteLine("Enter the Grade Point Average (GPA):");
+            //double gpa = double.Parse(Console.ReadLine());
+            //string letterGrade = ConvertToLetterGrade(gpa);
+            //Console.WriteLine("Your Letter Grade is " + letterGrade);
+
+            // NO 22
+            //Console.WriteLine("Enter the Row (1-8)");
+            //int row = int.Parse(Console.ReadLine());
+            //Console.WriteLine("Enter the Column (a-h)");
+            //char column = char.Parse(Console.ReadLine());
+            //string color = GetSquareColor(row, column);
+            //Console.WriteLine("The color of the given " + row + " and " + column + " is " + color);
+
+            // NO 23
+            //Console.WriteLine("Enter the Coefficient A");
+            //double a = double.Parse(Console.ReadLine());
+            //Console.WriteLine("Enter the Coefficient B");
+            //double b = double.Parse(Console.ReadLine());
+            //Console.WriteLine("Enter the Coefficent C");
+            //double c = double.Parse(Console.ReadLine());
+            //double root1, root2;
+            //if (a == b)
+            //{
+            //    Console.WriteLine("The Equation is not a Quadrant");
+            //}
+            //else
+            //{
+            //    double determinent = b * b - 4 * a * c;
+            //    if (determinent > 0)
+            //    {
+            //        root1 = (-b + Math.Sqrt(determinent)) / (2 * a);
+            //        root2 = (-b - Math.Sqrt(determinent)) / (2 * a);
+            //        Console.WriteLine("The roots of the Quadratic equation is " + root1 + " and " + root2);
+            //    }
+            //    else if (determinent == 0)
+            //    {
+            //        root1 = root2 = -b / (2 * a);
+            //        Console.WriteLine("The root of the quadratic equation is " + root1);
+            //    }
+            //    else
+            //    {
+            //        Console.WriteLine("The quadratic equations have no real roots");
+            //    }
+            //}
+
+            // NO 24
+            //Console.WriteLine("Enter the Original Price of the product");
+            //double originalPrice = double.Parse(Console.ReadLine());
+            //Console.WriteLine("Enter the Selling price of the product");
+            //double sellingPrice = double.Parse(Console.ReadLine());
+            //double ProfitorLoss = sellingPrice - originalPrice;
+            //if (ProfitorLoss > 0)
+            //{
+            //    Console.WriteLine("The profit on the transaction is " + ProfitorLoss);
+            //}
+            //else if (ProfitorLoss < 0)
+            //{
+            //    Console.WriteLine("The Loss on the transaction is " + ProfitorLoss);
+            //}
+            //else
+            //{
+            //    Console.WriteLine("There is no Profit or Loss");
+            //}
+
+            // NO 25
+            //Console.WriteLine("Calculator Menu: ");
+            //Console.WriteLine("1. Addition");
+            //Console.WriteLine("2. Subtraction");
+            //Console.WriteLine("3. Multiplication");
+            //Console.WriteLine("4. Division");
+            //Console.WriteLine("5. Modulo Division");
+            //Console.WriteLine("6. Exit");
+
+            //Console.WriteLine("Enter Your Choice (1-6)L ");
+            //int choice = int.Parse(Console.ReadLine());
+
+            //if (choice == 6)
+            //{
+            //    Console.WriteLine("Exiting the Function, Goodbye");
+            //}
+            //Console.WriteLine("Enter the First number");
+            //double num1 = double.Parse(Console.ReadLine());
+            //Console.WriteLine("Enter the Second Number");
+            //double num2 = double.Parse(Console.ReadLine());
+
+            //double result = 0;
+            //switch (choice)
+            //{
+            //    case 1:
+            //        result = num1 + num2;
+            //        Console.WriteLine("Result is " + result);
+            //        break;
+            //    case 2:
+            //        result = num1 - num2;
+            //        Console.WriteLine("Result is" + result);
+            //        break;
+            //    case 3:
+            //        result = num1 * num2;
+            //        Console.WriteLine("Result is" + result);
+            //        break;
+            //    case 4:
+            //        if (num2 != 0)
+            //        {
+            //            result = num1 / num2;
+            //            Console.WriteLine("Result is" + result);
+            //        }
+            //        else
+            //        {
+            //            Console.WriteLine("Error: Divisible by Zero is not allowed");
+            //        }
+            //        break;
+            //    case 5:
+            //        if (num2 != 0)
+            //        {
+            //            result = num1 % num2;
+            //            Console.WriteLine("Result is" + result);
+            //        }
+            //        else
+            //        {
+            //            Console.WriteLine("Error: Divisible by Zero is not allowed");
+            //        }
+            //        break;
+            //    default:
+            //        Console.WriteLine("Invalid Input: Please enter a valid input");
+            //        break;
+            //}
+
+            // NO 26
+            Random random = new Random();
+            int computerchoice = random.Next(1, 4);
+            Console.WriteLine("Welcome to Rock, Paper, Scissor Game");
+            Console.WriteLine("Enter Your Choice");
+            Console.WriteLine("1. Rock");
+            Console.WriteLine("2. Paper");
+            Console.WriteLine("3.Scissor");
+            string userChoiceStr = Console.ReadLine();
+            int userChoice = int.Parse(userChoiceStr);
+            if (userChoice >= 1 && userChoice <= 3)
+            {
+                Console.WriteLine("Computer Choice:" + computerchoice);
+
+                if (computerchoice == userChoice)
+                {
+                    Console.WriteLine("It is a tie");
+                }
+                else if (computerchoice == 1 && userChoice == 2 || computerchoice == 2 && userChoice == 3 || computerchoice
+                     == 3 && userChoice == 1)
+                {
+                    Console.WriteLine("User Wins");
+                }
+                else
+                {
+                    Console.WriteLine("Conputer Wins");
+                }
+            }
         }
 
         // No 8
@@ -479,6 +635,47 @@ namespace Question_Set_2
             else
             {
                 return "Scalene";
+            }
+        }
+
+
+        // NO 21
+        public static string ConvertToLetterGrade(double gpa)
+        {
+            if (gpa >= 90)
+            {
+                return "A";
+            }
+            else if (gpa >= 80)
+            {
+                return "B";
+            }
+            else if (gpa >= 70)
+            {
+                return "C";
+            }
+            else if (gpa >= 60)
+            {
+                return "D";
+            }
+            else
+            {
+                return "F";
+            }
+        }
+
+        //NO 22
+        public static string GetSquareColor(int row, char column)
+        {
+            bool isRowEven = row % 2 == 0;
+            bool IsColumnEven = ((int)column - (int)'a') % 2 == 0;
+            if (isRowEven)
+            {
+                return IsColumnEven ? "Black" : "White";
+            }
+            else
+            {
+                return isRowEven ? "White" : "Black";
             }
         }
     }
