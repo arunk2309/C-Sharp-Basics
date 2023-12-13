@@ -391,33 +391,33 @@ namespace Question_Set_2
             //}
 
             // NO 26
-            Random random = new Random();
-            int computerchoice = random.Next(1, 4);
-            Console.WriteLine("Welcome to Rock, Paper, Scissor Game");
-            Console.WriteLine("Enter Your Choice");
-            Console.WriteLine("1. Rock");
-            Console.WriteLine("2. Paper");
-            Console.WriteLine("3.Scissor");
-            string userChoiceStr = Console.ReadLine();
-            int userChoice = int.Parse(userChoiceStr);
-            if (userChoice >= 1 && userChoice <= 3)
-            {
-                Console.WriteLine("Computer Choice:" + computerchoice);
+            //Random random = new Random();
+            //int computerchoice = random.Next(1, 4);
+            //Console.WriteLine("Welcome to Rock, Paper, Scissor Game");
+            //Console.WriteLine("Enter Your Choice");
+            //Console.WriteLine("1. Rock");
+            //Console.WriteLine("2. Paper");
+            //Console.WriteLine("3.Scissor");
+            //string userChoiceStr = Console.ReadLine();
+            //int userChoice = int.Parse(userChoiceStr);
+            //if (userChoice >= 1 && userChoice <= 3)
+            //{
+            //    Console.WriteLine("Computer Choice:" + computerchoice);
 
-                if (computerchoice == userChoice)
-                {
-                    Console.WriteLine("It is a tie");
-                }
-                else if (computerchoice == 1 && userChoice == 2 || computerchoice == 2 && userChoice == 3 || computerchoice
-                     == 3 && userChoice == 1)
-                {
-                    Console.WriteLine("User Wins");
-                }
-                else
-                {
-                    Console.WriteLine("Conputer Wins");
-                }
-            }
+            //    if (computerchoice == userChoice)
+            //    {
+            //        Console.WriteLine("It is a tie");
+            //    }
+            //    else if (computerchoice == 1 && userChoice == 2 || computerchoice == 2 && userChoice == 3 || computerchoice
+            //         == 3 && userChoice == 1)
+            //    {
+            //        Console.WriteLine("User Wins");
+            //    }
+            //    else
+            //    {
+            //        Console.WriteLine("Conputer Wins");
+            //    }
+            //}
         }
 
         // No 8
