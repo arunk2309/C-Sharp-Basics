@@ -177,16 +177,69 @@ namespace Question_Set_1
             //Console.WriteLine(" The Net Amount of the Product is: " + netamount);
 
             // NO 20
-            Console.WriteLine(" Enter the Basic Pay: ");
-            double basicpay = double.Parse(Console.ReadLine());
-            Console.WriteLine(" Enter the DA Percentage: ");
-            double dapercentage = double.Parse(Console.ReadLine());
-            Console.WriteLine(" Enter the TA Percentage: ");
-            double tapercentage = double.Parse(Console.ReadLine());
-            Console.WriteLine(" Enter the PF Percentage: ");
-            double pfpercentage=double.Parse(Console.ReadLine());
-            double grosspay = CalculateGrossPay(basicpay, dapercentage, tapercentage, pfpercentage);
-            Console.WriteLine(" The Grosspay is: " + grosspay);
+            //Console.WriteLine(" Enter the Basic Pay: ");
+            //double basicpay = double.Parse(Console.ReadLine());
+            //Console.WriteLine(" Enter the DA Percentage: ");
+            //double dapercentage = double.Parse(Console.ReadLine());
+            //Console.WriteLine(" Enter the TA Percentage: ");
+            //double tapercentage = double.Parse(Console.ReadLine());
+            //Console.WriteLine(" Enter the PF Percentage: ");
+            //double pfpercentage=double.Parse(Console.ReadLine());
+            //double grosspay = CalculateGrossPay(basicpay, dapercentage, tapercentage, pfpercentage);
+            //Console.WriteLine(" The Grosspay is: " + grosspay);
+
+            // No 21
+            //Console.WriteLine(" Enter the Principal Amount: ");
+            //double principalamount = double.Parse(Console.ReadLine());
+            //Console.WriteLine("Enter the Number of Years: ");
+            //double numberofyears = double.Parse(Console.ReadLine());
+            //Console.WriteLine("Enter the Rate of Interest: ");
+            //double rateofinterest = double.Parse(Console.ReadLine());
+            //double SimpleInterest = principalamount * numberofyears * rateofinterest / 100;
+            //Console.WriteLine(" The Simple Interest is: " + SimpleInterest);
+
+            // NO 22
+            //Console.WriteLine(" Enter the Principal Amount: ");
+            //double principalamount = double.Parse(Console.ReadLine());
+            //Console.WriteLine(" Enter the Rate of Interest: ");
+            //double rateofinterest = double.Parse(Console.ReadLine());
+            //Console.WriteLine(" Enter the Number of Times Interest Compounded: ");
+            //double numberoftimesinterest = double.Parse(Console.ReadLine());
+            //Console.WriteLine(" Enter the Number of TImes: ");
+            //double numberoftimes = double.Parse(Console.ReadLine());
+            //double CompoundInterest = CalculateCompoundInterest(principalamount, rateofinterest, numberoftimesinterest, numberoftimes);
+            //Console.WriteLine(" The Compound Interest: " + CompoundInterest);
+
+            // NO 23
+            //Console.WriteLine(" Enter the Height in CM: ");
+            //double heightincm = double.Parse(Console.ReadLine());
+            //double heightinfeet = heightincm / 30.48;
+            //double heightininch = (heightincm % 30.48) / 2.54;
+            //Console.WriteLine(" The Height in Feet and Inches is: " + heightinfeet + " ft " + heightininch + " inch ");
+
+            // NO 24
+            //Console.WriteLine(" The Height in Meters: ");
+            //double heightinmeters = double.Parse(Console.ReadLine());
+            //Console.WriteLine(" The Weight in KG: ");
+            //double weightinkg = double.Parse(Console.ReadLine());
+            //double BMI = weightinkg / Math.Pow(heightinmeters, 2);
+            //Console.WriteLine(" The BMI is: " + BMI);
+
+            // NO 25
+            Console.WriteLine("Enter the ROLLNO:");
+            int RollNo = int.Parse(Console.ReadLine());
+            Console.WriteLine("Enter the Name:");
+            string name = Console.ReadLine();
+            Console.WriteLine("Enter the Mark 1:");
+            double Mark1 = double.Parse(Console.ReadLine());
+            Console.WriteLine("Enter the Mark 2:");
+            double mark2 = double.Parse(Console.ReadLine());
+            Console.WriteLine("Enter the Mark 3:");
+            double mark3 = double.Parse(Console.ReadLine());
+            double TotalMarks = Mark1 + mark2 + mark3;
+            double AverageMark = TotalMarks / 3;
+            Console.WriteLine("Total Marks is:" + TotalMarks);
+            Console.WriteLine("Average Marks is:" + AverageMark);
           
 
         }
@@ -203,6 +256,10 @@ namespace Question_Set_1
         public static double CalculateGrossPay(double basicpay, double dapercentage, double tapercentage, double pfpercentage)
         {
             return (basicpay + basicpay * dapercentage / 100 + basicpay * tapercentage / 100 - basicpay * pfpercentage / 100);
+        }
+        public static double CalculateCompoundInterest(double principalamount, double rateofinterest, double numberoftimesinterest, double numberoftimes)
+        {
+            return principalamount * Math.Pow((1 + rateofinterest / (100 * numberoftimesinterest)), (numberoftimesinterest * numberoftimes));
         }
     }
 
