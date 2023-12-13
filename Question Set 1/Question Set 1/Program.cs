@@ -80,11 +80,82 @@ namespace Question_Set_1
             //Console.WriteLine("The Distance in Miles is" + Miles);
 
             // NO 10
-            Console.WriteLine("Enter the Temperature in Celsius");
-            double Celsius = double.Parse(Console.ReadLine());
-            double Fareheit = (Celsius * 9) / 5 + 32;
-            Console.WriteLine("The Tenoerature in Fareheit is" + Fareheit);
+            //Console.WriteLine("Enter the Temperature in Celsius");
+            //double Celsius = double.Parse(Console.ReadLine());
+            //double Fareheit = (Celsius * 9) / 5 + 32;
+            //Console.WriteLine("The Tenoerature in Fareheit is" + Fareheit);
 
+            // NO 11
+            //Console.WriteLine("Enter the Value of A");
+            //int a = int.Parse(Console.ReadLine());
+            //Console.WriteLine("Enter the Value of B");
+            //int b = int.Parse(Console.ReadLine());
+            //int temp = a;
+            //a = b;
+            //b = temp;
+            //Console.WriteLine("After Swapping");
+            //Console.WriteLine("A" + a);
+            //Console.WriteLine("B" + b);
+
+            // NO 12
+            //int a = 20;
+            //int b = 50;
+            //Console.WriteLine("Before Swapping");
+            //Console.WriteLine(" A " + a);
+            //Console.WriteLine(" B " + b);
+            //a = a + b;
+            //b = a - b;
+            //a = a - b;
+            //Console.WriteLine("After swapping");
+            //Console.WriteLine(" A " + a);
+            //Console.WriteLine(" B " + b);
+
+            // NO 13
+            //int a = 20;
+            //int b = 50;
+            //Console.WriteLine("Before Swapping");
+            //Console.WriteLine(" A " + a);
+            //Console.WriteLine(" B " + b);
+            //if (a > b)
+            //{
+            //    int temp = a;
+            //    a = b;
+            //    a = temp;
+            //}
+            //else
+            //{
+            //    int temp = b;
+            //    b = a;
+            //    a = temp;
+            //}
+            //Console.WriteLine("After Swapping");
+            //Console.WriteLine(" A " + a);
+            //Console.WriteLine(" B " + b);
+            
+            // NO 14
+            //Random random = new Random();
+            //int number = random.Next(1, 100);
+            //Console.WriteLine(" Generated Number " + number);
+            
+
+            // NO 15
+            Console.WriteLine(" Enter the Length in Feet :");
+            int length = int.Parse(Console.ReadLine());
+            Console.WriteLine(" Enter the Width in Feet ");
+            int width = int.Parse(Console.ReadLine());
+            int areainacres = Calculateareainacres(length, width);
+            Console.WriteLine(" The Area of the Field is: " + areainacres);
+          
+
+        }
+
+        // NO 15
+        public static int Calculateareainacres(int length, int widht)
+        {
+            int squarefeettoacres = 43568;
+            long areatosquarefeet = (long)length * widht;
+            int areainacres = (int)areatosquarefeet / squarefeettoacres;
+            return areainacres;
         }
     }
 
