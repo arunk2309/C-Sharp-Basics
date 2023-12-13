@@ -139,12 +139,54 @@ namespace Question_Set_1
             
 
             // NO 15
-            Console.WriteLine(" Enter the Length in Feet :");
-            int length = int.Parse(Console.ReadLine());
-            Console.WriteLine(" Enter the Width in Feet ");
-            int width = int.Parse(Console.ReadLine());
-            int areainacres = Calculateareainacres(length, width);
-            Console.WriteLine(" The Area of the Field is: " + areainacres);
+            //Console.WriteLine(" Enter the Length in Feet :");
+            //int length = int.Parse(Console.ReadLine());
+            //Console.WriteLine(" Enter the Width in Feet ");
+            //int width = int.Parse(Console.ReadLine());
+            //int areainacres = Calculateareainacres(length, width);
+            //Console.WriteLine(" The Area of the Field is: " + areainacres);
+
+            // NO 16
+            //Console.WriteLine(" Enter the Value of N: ");
+            //int n = int.Parse(Console.ReadLine());
+            //int sum = n * (n + 1) / 2;
+            //Console.WriteLine(" The Sum of Natural Numbers is: " + sum);
+
+            // NO 17
+            //Console.WriteLine(" Enter the Value of A: ");
+            //int a = int.Parse(Console.ReadLine());
+            //Console.WriteLine(" Enter the Value of B: ");
+            //int b = int.Parse(Console.ReadLine());
+            //Console.WriteLine(" Enter the Value of C: ");
+            //int c = int.Parse(Console.ReadLine());
+            //int sum = a + b + c;
+            //Console.WriteLine(" The Average of " + a + " , " + b + " and " + c + " is: " + sum);
+            
+            // NO 18
+            //Console.WriteLine(" Enter the Total Bill Amount ");
+            //double billamount = double.Parse(Console.ReadLine());
+            //double tipamount = billamount * 0.05;
+            //Console.WriteLine(" The TIp amount to be provided to the Waiter is: " + tipamount);
+
+            // NO 19
+            //Console.WriteLine(" Enter the Total amount Paid: ");
+            //double totalamount = double.Parse(Console.ReadLine());
+            //Console.WriteLine(" Enter the Tax Percentage: ");
+            //double taxpercentage = double.Parse(Console.ReadLine());
+            //double netamount = totalamount / (1 + taxpercentage / 100);
+            //Console.WriteLine(" The Net Amount of the Product is: " + netamount);
+
+            // NO 20
+            Console.WriteLine(" Enter the Basic Pay: ");
+            double basicpay = double.Parse(Console.ReadLine());
+            Console.WriteLine(" Enter the DA Percentage: ");
+            double dapercentage = double.Parse(Console.ReadLine());
+            Console.WriteLine(" Enter the TA Percentage: ");
+            double tapercentage = double.Parse(Console.ReadLine());
+            Console.WriteLine(" Enter the PF Percentage: ");
+            double pfpercentage=double.Parse(Console.ReadLine());
+            double grosspay = CalculateGrossPay(basicpay, dapercentage, tapercentage, pfpercentage);
+            Console.WriteLine(" The Grosspay is: " + grosspay);
           
 
         }
@@ -157,7 +199,13 @@ namespace Question_Set_1
             int areainacres = (int)areatosquarefeet / squarefeettoacres;
             return areainacres;
         }
+        // 20
+        public static double CalculateGrossPay(double basicpay, double dapercentage, double tapercentage, double pfpercentage)
+        {
+            return (basicpay + basicpay * dapercentage / 100 + basicpay * tapercentage / 100 - basicpay * pfpercentage / 100);
+        }
     }
+
 
 
 }
