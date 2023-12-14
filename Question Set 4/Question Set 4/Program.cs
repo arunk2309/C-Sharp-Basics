@@ -243,11 +243,11 @@ namespace Question_Set_4
             //Console.WriteLine("The maximum number that can be formed using the given " + number + " is: " + maxNumber);
 
             // NO 20
-            Console.WriteLine("Enter an Integer");
-            long number = long.Parse(Console.ReadLine());
-            long minNumber = GetMinNumber(number);
-            Console.WriteLine("The Minimum that can be formed using the given " + number + " is: "
-+ minNumber);     
+//            Console.WriteLine("Enter an Integer");
+//            long number = long.Parse(Console.ReadLine());
+//            long minNumber = GetMinNumber(number);
+//            Console.WriteLine("The Minimum that can be formed using the given " + number + " is: "
+//+ minNumber);     
         
         }
 
