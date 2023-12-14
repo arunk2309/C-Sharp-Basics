@@ -3,3 +3,4 @@ C:\Users\admin\Documents\Visual Studio 2012\Projects\C Sharop Basics\Question Se
 C:\Users\admin\Documents\Visual Studio 2012\Projects\C Sharop Basics\Question Set 3\Question Set 3\bin\Debug\Question Set 3.pdb
 C:\Users\admin\Documents\Visual Studio 2012\Projects\C Sharop Basics\Question Set 3\Question Set 3\obj\Debug\Question Set 3.exe
 C:\Users\admin\Documents\Visual Studio 2012\Projects\C Sharop Basics\Question Set 3\Question Set 3\obj\Debug\Question Set 3.pdb
+C:\Users\admin\Documents\Visual Studio 2012\Projects\C Sharop Basics\Question Set 3\Question Set 3\obj\Debug\Question Set 3.csprojResolveAssemblyReference.cache
