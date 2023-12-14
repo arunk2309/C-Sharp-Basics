@@ -210,12 +210,47 @@ namespace Question_Set_4
             //Console.WriteLine("The Digital Root of the given " + number + " is: " + digitalroot);
 
             // NO 15
-            Console.WriteLine("Enter an Integer");
-            int number = int.Parse(Console.ReadLine());
-            bool result = CheckAllDivide(number);
-            Console.WriteLine("All Digits of given " + number + " divide by " + number + " is: " + result);
+            //Console.WriteLine("Enter an Integer");
+            //int number = int.Parse(Console.ReadLine());
+            //bool result = CheckAllDivide(number);
+            //Console.WriteLine("All Digits of given " + number + " divide by " + number + " is: " + result);
 
+            // NO 16
+//            Console.WriteLine("Enter the number");
+//            int number = int.Parse(Console.ReadLine());
+//            Console.WriteLine("Enter the Divisior");
+//            int divisior = int.Parse(Console.ReadLine());
+//            int countDivisibleDigit = CountDivisibleDigit(number, divisior);
+//            Console.WriteLine("Number of Digits in " + number + " is divisible by " + divisior + " is: "
+//+ countDivisibleDigit);
+
+            // NO 17
+            //Console.WriteLine("Enter an Integer");
+            //int number = int.Parse(Console.ReadLine());
+            //bool checkpalindrome = CheckPalindrom(number);
+            //Console.WriteLine("Given Integer is " + checkpalindrome);
+
+            // NO 18
+            //Console.WriteLine("Enter an Long Positive Integer");
+            //long number = long.Parse(Console.ReadLine());
+            //bool checkpalindrome = IsPalindrome(number);
+            //Console.WriteLine("The Given long postive integer is palindrome or not: " + checkpalindrome);
+
+            // NO 19
+            //Console.WriteLine("Enter an Integer");
+            //int number = int.Parse(Console.ReadLine());
+            //long maxNumber = GetMaxNumber(number);
+            //Console.WriteLine("The maximum number that can be formed using the given " + number + " is: " + maxNumber);
+
+            // NO 20
+            Console.WriteLine("Enter an Integer");
+            long number = long.Parse(Console.ReadLine());
+            long minNumber = GetMinNumber(number);
+            Console.WriteLine("The Minimum that can be formed using the given " + number + " is: "
++ minNumber);     
+        
         }
+
 
         // NO 9
         public static int getMaxDigit(int number)
@@ -308,6 +343,74 @@ namespace Question_Set_4
                 number /= 10;
             }
             return true;
+        }
+        public static int CountDivisibleDigit(int number, int divisior)
+        {
+            int count = 0;
+            while (number != 0)
+            {
+                int digit = number % 10;
+                if (digit % divisior == 0)
+                {
+                    count++;
+                }
+                number /= 10;
+            }
+            return count;
+        }
+        // no 17
+        public static bool CheckPalindrom(int number)
+        {
+            if (number < 1 || number > 999)
+            {
+                Console.WriteLine("Error : The Value should be Two or Three integer");
+                return false;
+            }
+            int originalnumber = number;
+            int reverse = 0;
+            while (number > 0)
+            {
+                int digit = number % 10;
+                reverse = reverse * 10 + digit;
+                number /= 10;
+            }
+            return originalnumber == reverse;
+        }
+        // NO 18
+        public static bool IsPalindrome(long number)
+        {
+            if (number < 0)
+            {
+                Console.WriteLine("Number must be in Positive");
+                return false;
+            }
+            long originalnumber = number;
+            long reversenumber = 0;
+            while (number > 0)
+            {
+                long digit = number % 10;
+                reversenumber = reversenumber * 10 + digit;
+                number /= 10;
+            }
+            return originalnumber == reversenumber;
+        }
+        // NO 19
+        public static long GetMaxNumber(int number)
+        {
+            string numberString = number.ToString();
+            char[] numberchars = numberString.ToCharArray();
+            Array.Sort(numberchars);
+            Array.Reverse(numberchars);
+
+            return long.Parse(new string(numberchars));
+        }
+        // NO 20
+        public static long GetMinNumber(long number)
+        {
+            string numberString = number.ToString();
+            char[] numberchars = numberString.ToCharArray();
+            Array.Sort(numberchars);
+            return long.Parse(new string(numberchars));
         }
     }
 }
