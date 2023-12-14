@@ -72,27 +72,106 @@ namespace Question_Set_4
             //Console.WriteLine("Sum of Digits located in Even Position is: " + sumEven);
 
             // NO 5
-            Console.WriteLine("Enter an integer");
+            //Console.WriteLine("Enter an integer");
+            //int number = int.Parse(Console.ReadLine());
+            //int Odd = 0;
+            //int Even = 0;
+            //while (number != 0)
+            //{
+            //    if ((number % 10) % 2 != 0)
+            //    {
+            //        Odd++;
+            //    }
+            //    number /= 10;
+            //    if ((number % 10) % 2 == 0)
+            //    {
+            //        Even++;
+            //    }
+            //    number /= 10;
+            //}
+            //Console.WriteLine("Count of Odd Digits: " + Odd);
+            //Console.WriteLine("Count of Even Digits: " + Even);
+
+            // NO 6
+            //Console.WriteLine("Enter an Integer");
+            //int number = int.Parse(Console.ReadLine());
+            //int sumOdd = 0;
+            //int sumEven = 0;
+            //while (number != 0)
+            //{
+            //    if ((number % 10) % 2 != 0)
+            //    {
+            //        sumOdd += number % 10;
+            //    }
+            //    number /= 10;
+            //    if ((number % 10) % 2 == 0)
+            //    {
+            //        sumEven += number % 10;
+            //    }
+            //    number /= 10;
+            //}
+            //Console.WriteLine("Sum of Odd Digits:" + sumOdd);
+            //Console.WriteLine("Sum of Even Digits:" + sumEven);
+            // NO 7
+            //Console.WriteLine("Enter an Integer");
+            //int number = int.Parse(Console.ReadLine());
+            //int lastdigit = number % 10;
+            //Console.WriteLine("The Last Digit of the given integer is: " + lastdigit);
+
+            // NO 8
+            //Console.WriteLine("Enter an Integer");
+            //int number = int.Parse(Console.ReadLine());
+            //int firstdigit = number;
+            //while (firstdigit >= 10)
+            //{
+            //    firstdigit /= 10;
+            //}
+            //Console.WriteLine("First Digit of the given integer is:" + firstdigit);
+
+            // NO 9
+            //Console.WriteLine("Enter an Integer");
+            //int number = int.Parse(Console.ReadLine());
+            //int maxDigit = getMaxDigit(number);
+            //Console.WriteLine("Maximum Digit of the given integer is:" + maxDigit);
+
+            // NO 10
+            Console.WriteLine("Enter an Integer");
             int number = int.Parse(Console.ReadLine());
-            int Odd = 0;
-            int Even = 0;
+            int maxDigit = int.MinValue;
+            int maxDigitPostion = 0;
+            int postion = 1;
+            while (number > 0)
+            {
+                int digit = number % 10;
+                if (digit > maxDigit)
+                {
+                    maxDigit = digit;
+                    maxDigitPostion = postion;
+                }
+                number /= 10;
+                postion *= 10;
+            }
+            Console.WriteLine("Maximum Digit is " + maxDigit);
+            Console.WriteLine("Maximum Digit Location is " + maxDigitPostion);
+        
+        
+        }
+
+        // NO 9
+        public static int getMaxDigit(int number)
+        {
+            int maxDigit = -1;
             while (number != 0)
             {
-                if ((number % 10) % 2 != 0)
-                {
-                    Odd++;
-                }
+                int digit = number % 10;
                 number /= 10;
-                if ((number % 10) % 2 == 0)
+                if (digit > maxDigit)
                 {
-                    Even++;
+                    maxDigit = digit;
                 }
-                number /= 10;
             }
-            Console.WriteLine("Sum of Odd Digits: " + Odd);
-            Console.WriteLine("Sum of Even Digits: " + Even);
-        
-        
+            return maxDigit;
+
         }
     }
 }
