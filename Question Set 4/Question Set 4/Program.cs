@@ -135,26 +135,86 @@ namespace Question_Set_4
             //Console.WriteLine("Maximum Digit of the given integer is:" + maxDigit);
 
             // NO 10
+            //Console.WriteLine("Enter an Integer");
+            //int number = int.Parse(Console.ReadLine());
+            //int maxDigit = int.MinValue;
+            //int maxDigitPostion = 0;
+            //int postion = 1;
+            //while (number > 0)
+            //{
+            //    int digit = number % 10;
+            //    if (digit > maxDigit)
+            //    {
+            //        maxDigit = digit;
+            //        maxDigitPostion = postion;
+            //    }
+            //    number /= 10;
+            //    postion *= 10;
+            //}
+            //Console.WriteLine("Maximum Digit is " + maxDigit);
+            //Console.WriteLine("Maximum Digit Location is " + maxDigitPostion);
+
+            // NO 11
+            //Console.WriteLine("Enter an Integer");
+            //int number = int.Parse(Console.ReadLine());
+            //int minDigit = getMinDigit(number);
+            //Console.WriteLine("Minimum Digit of the given integer is: " + minDigit);
+
+            // NO 12
+            //Console.WriteLine("Enter an Integer");
+            //int number = int.Parse(Console.ReadLine());
+            //string numStr = Math.Abs(number).ToString();
+            //int minDigit = numStr[0] - '0';
+            //int minDigitLocation = 1;
+            //for (int i = 1; i < numStr.Length; i++)
+            //{
+            //    int currenDigit = numStr[i] - '0';
+            //    if (currenDigit < minDigit)
+            //    {
+            //        minDigit = currenDigit;
+            //        minDigitLocation = (int)Math.Pow(10, i);
+            //    }
+            //}
+            //Console.WriteLine("Minimum Digit is: " + minDigit);
+            //Console.WriteLine("Minimum Digit Location is: " + minDigitLocation);
+            // No 12
+            //Console.WriteLine("Enter an Integer");
+            //int number = int.Parse(Console.ReadLine());
+            //int minDigit = int.MaxValue;
+            //int minDigitPostion = 0;
+            //int postion = 1;
+            //while (number > 0)
+            //{
+            //    int digit = number % 10;
+            //    if (digit < minDigit)
+            //    {
+            //        minDigit = digit;
+            //        minDigitPostion = postion;
+            //    }
+            //    number /= 10;
+            //    postion *= 10;
+            //}
+            //Console.WriteLine("Minimum Digit is " + minDigit);
+            //Console.WriteLine("Minimum Digit Location is " + minDigitPostion);
+
+            // NO 13
+            //Console.WriteLine("Enter an Integer");
+            //int number = int.Parse(Console.ReadLine());
+            //int reversedNumber = reverseNumber(number);
+            //Console.WriteLine("The Reverse number of the given " + number + " is: " + reversedNumber);
+            
+            // NO 14
+            //Console.WriteLine("Enter an Integer");
+            //int number = int.Parse(Console.ReadLine());
+            //int digitalroot = DigitalRoot(number);
+            //Console.WriteLine("The Digital Root of the given " + number + " is: " + digitalroot);
+
+            // NO 15
             Console.WriteLine("Enter an Integer");
             int number = int.Parse(Console.ReadLine());
-            int maxDigit = int.MinValue;
-            int maxDigitPostion = 0;
-            int postion = 1;
-            while (number > 0)
-            {
-                int digit = number % 10;
-                if (digit > maxDigit)
-                {
-                    maxDigit = digit;
-                    maxDigitPostion = postion;
-                }
-                number /= 10;
-                postion *= 10;
-            }
-            Console.WriteLine("Maximum Digit is " + maxDigit);
-            Console.WriteLine("Maximum Digit Location is " + maxDigitPostion);
-        
-        
+            bool result = CheckAllDivide(number);
+            Console.WriteLine("All Digits of given " + number + " divide by " + number + " is: " + result);
+
         }
 
         // NO 9
@@ -172,6 +232,82 @@ namespace Question_Set_4
             }
             return maxDigit;
 
+        }
+
+        // NO 11
+        public static int getMinDigit(int number)
+        {
+            int minDigit = int.MaxValue;
+            while (number != 0)
+            {
+                int digit = number % 10;
+                number /= 10;
+                if (digit < minDigit)
+                {
+                    minDigit = digit;
+                }
+            }
+            return minDigit;
+        }
+        // NO 12
+        //public static int getMinDigitLocation(int number)
+        //{
+        //    int minDigit = int.MaxValue;
+        //    int minDigitLocation = 0;
+        //    while (number != 0)
+        //    {
+        //        int digit = number % 10;
+        //        number /= 10;
+        //        if (digit < minDigit)
+        //        {
+        //            minDigit = digit;
+        //            minDigitLocation = 1;
+        //        }
+        //        else if (digit == minDigit)
+        //        {
+        //            minDigitLocation++;
+        //        }
+        //    }
+        //    return minDigitLocation;
+        //}
+        // NO 13
+        public static int reverseNumber(int number)
+        {
+            int reversedNumber = 0;
+            while (number != 0)
+            {
+                int digit = number % 10;
+                reversedNumber = reversedNumber * 10 + digit;
+                number /= 10;
+            }
+            return reversedNumber;
+        }
+        // no 15
+        public static int DigitalRoot(int number)
+        {
+            int digitalroot = 0;
+            while (number != 0)
+            {
+                int digit = number % 10;
+                digitalroot += digit;
+                number /= 10;
+            }
+            return (digitalroot > 9) ? DigitalRoot(digitalroot) : digitalroot;
+        }
+        // NO 15
+        public static bool CheckAllDivide(int number)
+        {
+            int originalnumber = number;
+            while (number > 0)
+            {
+                int digit = number % 10;
+                if (digit == 0 || originalnumber != 0)
+                {
+                    return false;
+                }
+                number /= 10;
+            }
+            return true;
         }
     }
 }
