@@ -124,18 +124,93 @@ namespace Question_Set_5
             //    Console.WriteLine("The nearest prime number is: " + Primenum);
             //}
             // NO 15
-            Console.WriteLine("Enter an number");
-            int num = int.Parse(Console.ReadLine());
-            Console.WriteLine("Enter K: ");
-            int k = int.Parse(Console.ReadLine());
-            int primeNum = FindKPrime(num, k);
-            if (primeNum == -1)
+            //Console.WriteLine("Enter an number");
+            //int num = int.Parse(Console.ReadLine());
+            //Console.WriteLine("Enter K: ");
+            //int k = int.Parse(Console.ReadLine());
+            //int primeNum = FindKPrime(num, k);
+            //if (primeNum == -1)
+            //{
+            //    Console.WriteLine("There is no prime number");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("The Kth Prime number is " + primeNum);
+            //}
+            // NO 16
+            //Console.WriteLine("Enter the value of M: ");
+            //int M = int.Parse(Console.ReadLine());
+            //Console.WriteLine("Emter the value of N: ");
+            //int N = int.Parse(Console.ReadLine());
+            //bool PrimeExists = FindPrimeExistence(M, N);
+            //if (PrimeExists)
+            //{
+            //    Console.WriteLine("THere Exists Prime number betweem M and N: ");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("There is no prime number between M and N: ");
+            //}
+            // NO 17
+            //Console.WriteLine("Enter the value of M:");
+            //int M = int.Parse(Console.ReadLine());
+            //Console.WriteLine("Enter the value of N:");
+            //int N = int.Parse(Console.ReadLine());
+            //int maxCount = 0;
+            //int maxCountNumber = 0;
+            //for (int i = M; i <= N; i++)
+            //{
+            //    int count = GetPrimeCount(i);
+            //    if (count > maxCount)
+            //    {
+            //        maxCount = count;
+            //        maxCountNumber = i;
+            //    }
+            //}
+            //Console.WriteLine("The number with distince prime factors is: " + maxCountNumber);
+            //Console.WriteLine("The Maximum Count is: " + maxCount);
+            // NO 18
+            //Console.WriteLine("Enter a value of N");
+            //int N = int.Parse(Console.ReadLine());
+            //if (ProductofTwoPrime(N))
+            //{
+            //    Console.WriteLine("Yes " + N + " can be represent as a product of two prime numbers: ");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("No, " + N + " cannot be represent as a product of two prime numbers");
+            //}
+            // NO 19
+            //Console.WriteLine("Enter the value of N");
+            //int N = int.Parse(Console.ReadLine());
+            //if (ProductofTwoPrime(N))
+            //{
+            //    Console.WriteLine("Yes, " + N + " can be represent as the prodct of two distinct prime number");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("No, " + N + " cannot be represent as the product of two distince prime number");
+            //}
+            // NO 20
+            Console.WriteLine("Enter the value of N");
+            int N = int.Parse(Console.ReadLine());
+            List<int> PrimeFactors = new List<int>();
+            for (int i = 2; i <= Math.Sqrt(N); i++)
             {
-                Console.WriteLine("There is no prime number");
+                while (N % i == 0)
+                {
+                    PrimeFactors.Add(i);
+                    N /= i;
+                }
             }
-            else
+            if (N > 1)
             {
-                Console.WriteLine("The Kth Prime number is " + primeNum);
+                PrimeFactors.Add(N);
+            }
+            Console.WriteLine("Prime Factor of: " + N);
+            foreach (int primefactor in PrimeFactors)
+            {
+                Console.WriteLine(primefactor + "");
             }
 
 
@@ -247,7 +322,7 @@ namespace Question_Set_5
         //    }
         //}
         //// NO 10
-        //public static int CountPrimes(int m, int n)
+        //public static int CountPrimes(int m, int n)   
         //{
         //    int count = 0;
         //    for (int i = m; i <= n; i++)
@@ -352,5 +427,54 @@ namespace Question_Set_5
             }
             return primeNum;
         }
+        // no 16
+        public static bool FindPrimeExistence(int M, int N)
+        {
+            for (int i = M; i <= N; i++)
+            {
+                if (NearPrime(i))
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+        // no 17
+        public static int GetPrimeCount(int num)
+        {
+            HashSet<int> PrimeFactors = new HashSet<int>();
+            for (int i = 2; i <= Math.Sqrt(num); i++)
+            {
+                while (num % i == 0)
+                {
+                    PrimeFactors.Add(i);
+                    num /= i;
+                }
+            }
+            if (num > 1)
+            {
+                PrimeFactors.Add(num);
+            }
+            return PrimeFactors.Count;
+        }
+        // no 18
+        public static bool ProductofTwoPrime(int N)
+        {
+            HashSet<int> PrimeFactors = new HashSet<int>();
+            for (int i = 2; i <= Math.Sqrt(N); i++)
+            {
+                while (N % i == 0)
+                {
+                    PrimeFactors.Add(i);
+                    N /= i;
+                }
+            }
+            if (N > 1)
+            {
+                PrimeFactors.Add(N);
+            }
+            return PrimeFactors.Count >= 2;
+        }
+       
     }
 }
